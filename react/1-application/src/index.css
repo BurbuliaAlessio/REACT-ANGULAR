@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  /* === Color palette === */
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* === Grayscale === */
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+
+  /* === Typography === */
+  --font-family-base: 'Poppins', Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.25rem;
+  --line-height-base: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* === Spacing === */
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* === Borders === */
+  --border-radius-sm: 0.2rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-width: 1px;
+  --border-color: var(--gray-300);
+
+  /* === Shadows === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  /* === Breakpoints === */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  /* === Z-index === */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal: 1040;
+  --z-index-tooltip: 1050;
+
+  /* === Transitions === */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-slow: 0.4s ease-in-out;
+
+  /* === Container === */
+  --container-width: 1200px;
+  --container-padding: var(--spacing-md);
+}

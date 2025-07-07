@@ -1,0 +1,28 @@
+.search {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+
+  input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  /* Icon inside input */
+  &::before {
+    content: "\f002";
+    /* Unicode FontAwesome magnifying glass */
+    font-family: "Font Awesome 5 Free";
+    /* Assicurati di avere il font */
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+  }
+}

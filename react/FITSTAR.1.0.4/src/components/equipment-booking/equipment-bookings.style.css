@@ -1,0 +1,68 @@
+.bookings-container{
+    background-color: var(--background-color);
+    width: 100%;
+    max-width: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.bookings-container h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.bookings-container h2::after{
+    content: '';
+    display: block;
+    width: 70%;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 20px auto;
+}
+
+.personal-area .bookings-container > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bookings-container p{
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+}
+
+.booking{
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.205);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.booking p.strong{
+    font-weight: bold;
+}
+
+.booking p:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    padding: 5px;
+    aspect-ratio: 1/1;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-radius: 50%;
+}

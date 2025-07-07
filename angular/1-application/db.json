@@ -1,0 +1,214 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Mario Rossi",
+      "email": "mario.rossi@example.com",
+      "phone": "+390123456789",
+      "notes": "Collega di lavoro"
+    },
+    {
+      "id": 2,
+      "name": "Luca Bianchi",
+      "email": "luca.bianchi@example.com",
+      "phone": "+390987654321",
+      "notes": "Amico"
+    },
+    {
+      "id": 3,
+      "name": "Giulia Verdi",
+      "email": "giulia.verdi@example.com",
+      "phone": "+390112223334",
+      "notes": "Cliente"
+    },
+    {
+      "id": 4,
+      "name": "Alessandro Neri",
+      "email": "alessandro.neri@example.com",
+      "phone": "+390556677889",
+      "notes": "Contatto Linkedin"
+    },
+    {
+      "id": 5,
+      "name": "Laura Gialli",
+      "email": "laura.gialli@example.com",
+      "phone": "+390667788990",
+      "notes": "Partner commerciale"
+    },
+    {
+      "id": 6,
+      "name": "Marco Blu",
+      "email": "marco.blu@example.com",
+      "phone": "+390112233445",
+      "notes": "Fornitore"
+    },
+    {
+      "id": 7,
+      "name": "Elena Rosa",
+      "email": "elena.rosa@example.com",
+      "phone": "+390998877665",
+      "notes": "Progetto X"
+    },
+    {
+      "id": 8,
+      "name": "Davide Grigi",
+      "email": "davide.grigi@example.com",
+      "phone": "+390334455667",
+      "notes": "Contatto eventi"
+    },
+    {
+      "id": 9,
+      "name": "Sara Viola",
+      "email": "sara.viola@example.com",
+      "phone": "+390223344556",
+      "notes": "Sponsorizzazione"
+    },
+    {
+      "id": 10,
+      "name": "Paolo Marrone",
+      "email": "paolo.marrone@example.com",
+      "phone": "+390443322110",
+      "notes": "Prospetto"
+    },
+    {
+      "id": 11,
+      "name": "Simona Celeste",
+      "email": "simona.celeste@example.com",
+      "phone": "+390778899001",
+      "notes": "Studio legale"
+    },
+    {
+      "id": 12,
+      "name": "Stefano Argento",
+      "email": "stefano.argento@example.com",
+      "phone": "+390667788991",
+      "notes": "Fatturazione"
+    },
+    {
+      "id": 13,
+      "name": "Chiara Bruno",
+      "email": "chiara.bruno@example.com",
+      "phone": "+390445566778",
+      "notes": "Richiesta info"
+    },
+    {
+      "id": 14,
+      "name": "Fabio Bianco",
+      "email": "fabio.bianco@example.com",
+      "phone": "+390556677889",
+      "notes": "Workshop"
+    },
+    {
+      "id": 15,
+      "name": "Claudia Nero",
+      "email": "claudia.nero@example.com",
+      "phone": "+390998877665",
+      "notes": "Training"
+    },
+    {
+      "id": 16,
+      "name": "Andrea Verde",
+      "email": "andrea.verde@example.com",
+      "phone": "+390667788990",
+      "notes": "Collega"
+    },
+    {
+      "id": 17,
+      "name": "Giorgia Fucsia",
+      "email": "giorgia.fucsia@example.com",
+      "phone": "+390112233445",
+      "notes": "Nuovo contatto"
+    },
+    {
+      "id": 18,
+      "name": "Michele Arancione",
+      "email": "michele.arancione@example.com",
+      "phone": "+390223344556",
+      "notes": "Webinar"
+    },
+    {
+      "id": 19,
+      "name": "Francesca Rosa",
+      "email": "francesca.rosa@example.com",
+      "phone": "+390334455667",
+      "notes": "Partner"
+    },
+    {
+      "id": 20,
+      "name": "Lorenzo Ciano",
+      "email": "lorenzo.ciano@example.com",
+      "phone": "+390778899001",
+      "notes": "Progetto Y"
+    },
+    {
+      "id": 21,
+      "name": "Valentina Oro",
+      "email": "valentina.oro@example.com",
+      "phone": "+390556677889",
+      "notes": "Altro"
+    },
+    {
+      "id": 22,
+      "name": "Giovanni Viola",
+      "email": "giovanni.viola@example.com",
+      "phone": "+390667788991",
+      "notes": "Cliente storico"
+    },
+    {
+      "id": 23,
+      "name": "Serena Marrone",
+      "email": "serena.marrone@example.com",
+      "phone": "+390998877665",
+      "notes": "Prospetto"
+    },
+    {
+      "id": 24,
+      "name": "Daniele Giallo",
+      "email": "daniele.giallo@example.com",
+      "phone": "+390223344556",
+      "notes": "Eventi"
+    },
+    {
+      "id": 25,
+      "name": "Eleonora Argento",
+      "email": "eleonora.argento@example.com",
+      "phone": "+390112233445",
+      "notes": "Conferenza"
+    },
+    {
+      "id": 26,
+      "name": "Gabriele Blu",
+      "email": "gabriele.blu@example.com",
+      "phone": "+390778899001",
+      "notes": "Marketing"
+    },
+    {
+      "id": 27,
+      "name": "Martina Verde",
+      "email": "martina.verde@example.com",
+      "phone": "+390667788990",
+      "notes": "Social"
+    },
+    {
+      "id": 28,
+      "name": "Pietro Rosso",
+      "email": "pietro.rosso@example.com",
+      "phone": "+390334455667",
+      "notes": "Referente"
+    },
+    {
+      "id": 29,
+      "name": "Stefania Nera",
+      "email": "stefania.nera@example.com",
+      "phone": "+390556677889",
+      "notes": "Formazione"
+    },
+    {
+      "id": 30,
+      "name": "Davide Bianco",
+      "email": "davide.bianco@example.com",
+      "phone": "+390223344556",
+      "notes": "Consulente"
+    }
+  ]
+}

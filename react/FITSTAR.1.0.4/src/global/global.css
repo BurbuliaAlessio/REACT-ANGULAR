@@ -1,0 +1,192 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Root variables for color and font */
+:root {
+  --primary-color: #c82525; /* Electric Yellow */
+  --accent-color: #000000;  /* Deep Black */
+  --secondary-color: #FFFFFF; /* Pure White */
+
+  --text-color: #161616;
+  --background-color: #FFFFFF; /* Pure White background for clean look */
+
+  --font-main: 'Inter', sans-serif; /* Main font (for headlines) */
+  --font-body: 'Roboto', sans-serif; /* Body font */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Previene lo scroll orizzontale */
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  color: var(--primary-color);
+  text-transform: uppercase; /* For a more dynamic, modern effect */
+}
+
+p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--accent-color);
+}
+
+/* Global styles */
+.container {
+  font-family: var(--font-body);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container h2{
+  font-family: var(--font-main);
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+header[class^="heading-page"] { 
+  background-image: url("/backgrounds/background-1.webp");
+  width: 100%;
+  background-repeat: no-repeat; /* Prevent background repetition */
+  background-position: top; /* Center the background image */
+  background-attachment: fixed; /* Keep background fixed during scroll */
+  background-size: cover; /* Cover the entire header area with the background */
+  overflow: hidden; /* Prevent any content from overflowing */
+  
+  /* Flexbox setup for centering content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px; /* Space between the content elements */
+  height: 100vh; /* Set the height of the header to 90% of the viewport height */
+}
+
+/* Responsive design: For screens smaller than 992px (mobile devices) */
+@media (max-width: 992px) {
+  header[class^="heading-page"] {
+      background-position: top; /* Align background image to the top */
+      margin-top: 0px; /* Remove margin at the top */
+  }
+}
+
+/* For medium-sized screens between 992px and 1400px */
+@media (min-width: 992px) and (max-width: 1400px) {
+  header[class^="heading-page"] {
+      margin-top: 80px; /* Add margin on top */
+  }
+}
+
+/* For large screens (greater than 1400px) */
+@media (min-width: 1400px) {
+  header[class^="heading-page"] {
+      margin-top: 100px; /* Add margin on top */
+  }
+}
+
+header[class^="heading-page"] .content {
+  /* Positioning and styling of the main content inside the header */
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  color: white; /* Set text color to white */
+  font-size: 2.5rem; /* Large font size for the header text */
+  font-family: var(--font-main);
+  font-weight: 700;
+}
+
+header[class^="heading-page"] .content h1 {
+  color: var(--background-color);
+  font-size: 3.5rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+header[class^="heading-page"] .content h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 15px 3px;
+  background-color: var(--background-color);
+}
+
+header[class^="heading-page"] .content p {
+  font-size: 2rem;
+  padding: auto;
+}
+
+header[class^="heading-page"] .content .button {
+  display: block;
+  font-size: 1.5rem;
+  width: fit-content;
+  padding: 15px 20px;
+  margin-top: 30px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  text-decoration: none;
+}
+
+.overlay {
+  /* Full-size overlay to dim the background and apply a blur effect */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.506); /* Semi-transparent white overlay */
+  backdrop-filter: blur(4px); /* Apply a blur effect to the background */
+  -webkit-backdrop-filter: blur(4px); /* Safari support for blur effect */
+  
+  /* Flexbox layout for centering content inside the overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary); /* Set the text color */
+}
+
+[class^="our-machines"],
+[class*=" our-machines"] {
+  font-family: var(--font-main);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  margin-bottom: 50px;
+}
+
+[class^="our-machines"] h2,
+[class*=" our-machines"] h2 {
+  font-size: 2.5rem;
+  margin-bottom: 70px;
+  max-width: 200px;
+  width: fit-content;
+  margin: 70px auto;
+}

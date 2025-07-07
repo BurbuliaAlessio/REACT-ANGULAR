@@ -1,0 +1,134 @@
+/* Header */
+/* Responsive design: For screens smaller than 992px (mobile devices) */
+@media (max-width: 992px) {
+    header.heading-page {
+        background: url("/backgrounds/home/background-home-mobile.jpg");
+    }
+}
+
+/* For medium-sized screens between 992px and 1400px */
+@media (min-width: 992px) {
+    header.heading-page {
+        background: url("/backgrounds/home/background-home.jpg");
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.container, .our-machines, .our-hours, .sig-in {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px;
+    box-sizing: border-box; 
+}
+
+main header{
+    margin-bottom: 40px;
+}
+
+/* Main Content */
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.sig-in{
+    position: relative;
+    height: 500px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.sig-in img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.sig-in .container{
+    position: absolute;
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    height: 250px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 120px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .sig-in{
+        margin-bottom: 100px;
+    }
+}
+
+.sig-in .button{
+    position: absolute;
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: 400;
+    font-size: 2.5rem;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sig-in .button:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.sig-in .container h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.our-hours{
+    font-family: var(--font-main);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--background-color);
+    margin-bottom: 100px;
+}
+
+.our-hours ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-hours ul li{
+    padding: 30px 0px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.our-hours ul li:hover{
+    transform:translateY(-8px);
+}
+
+.our-hours ul li div:first-child{
+    font-size: 2.5rem;
+}
+
+.our-hours ul li div:last-child{
+    font-size: 1rem;
+}

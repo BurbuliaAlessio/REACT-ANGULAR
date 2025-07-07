@@ -1,0 +1,80 @@
+<div class="course">
+    <figure class="image-wrapper">
+        <img src="{{ course().image }}" alt="image about {{course().name}}">
+    </figure>
+    <h2>{{ course().name }}</h2>
+    <div>               
+        <div>
+            @if(course().isSubscribed){
+                you're subscribe on this course
+            } @else {
+                you're not subscribe on this course
+            }
+        </div>
+        <div class="price">
+            <p>{{ course().price }}</p>
+        </div>
+    </div>
+    <div class="iddicted information">
+        <div class="information">
+            <p> {{ course().description }} </p>
+            <p> {{ course().duration }} </p>
+            <P> {{ course().level }} </P>
+        </div>
+        <div class="schedule">
+            <p>{{ course().schedule.days }}</p>
+            <p>{{ course().schedule.time }}</p>
+        </div>
+        <div class="capacity">
+            <p>
+                maxCapacity: {{ course().maxCapacity }}
+            </p>
+            <p>
+                actualSubscribed: {{ course().actualSubscribed }}
+            </p>
+        </div>
+        <div>
+
+            <button class="btn cta-button" (click)="isOpenModal()">{{ course().isSubscribed ? 'Unsubscribe' : 'Subscribe' }}</button>
+        
+        @if (course().maxCapacity <= course().actualSubscribed && !course().isSubscribed) {
+            <p class="alert">this course is full</p>
+        }
+    </div>
+    @if(coursesSubscribed){
+      <div class="success">
+        <p>
+          {{coursesSubscribed}}
+        </p>
+      </div>
+    }  
+</div>
+</div>
+
+
+@if(isModalOpen && course().maxCapacity > course().actualSubscribed){
+    <div class="modal-backdrop">
+      <div class="modal">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirm to {{ course().isSubscribed ? 'unsubscribe' : 'subscribe' }} at course</h5>
+        </div>
+        <div class="modal-body">
+          <p><strong>Name:</strong> {{ course().name }}</p>
+          <p><strong>Description:</strong> {{ course().description }}</p>
+          <p><strong>Duration:</strong> {{ course().duration }}</p>
+          <p><strong>Level:</strong> {{ course().level }}</p>
+        </div>
+        <div class="modal-footer">
+          <button class="cta-button" (click)="isOpenModal()">
+            Cancel
+          </button>
+          
+          <button  (click)="updateSubscription(course()); isOpenModal()" class="cta-button" 
+          [disabled]="course().maxCapacity <= course().actualSubscribed && !course().isSubscribed">
+              <!-- Check if the course is full and user is not subscribed, disable button -->
+              {{ course().isSubscribed ? 'Unsubscribe' : 'Subscribe' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  }

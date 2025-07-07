@@ -1,0 +1,79 @@
+/* Styling for the create course form */
+form {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: var(--border-radius); /* Rounded corners */
+    padding: var(--spacing-medium); /* Internal padding */
+    box-shadow: var(--box-shadow); /* Light shadow to make the form stand out */
+    max-width: 600px; /* Maximum width for the form */
+    margin: 20px auto; /* Center the form horizontally */
+}
+
+h2 {
+    font-family: var(--font-main); /* Main font for the title */
+    color: var(--primary-color); /* Primary color for the title text */
+    margin-bottom: var(--spacing-medium); /* Margin below the title */
+}
+
+.mb-3 {
+    margin-bottom: var(--spacing-medium); /* Bottom margin for each field */
+}
+
+label {
+    font-family: var(--font-body); /* Font for the label */
+    color: var(--text-color); /* Text color for the label */
+    font-weight: 500; /* Slightly bold text */
+    margin-bottom: var(--spacing-small); /* Margin below the label */
+    display: block; /* Make label block level to align inputs properly */
+}
+
+input,
+textarea,
+select {
+    width: 90%; /* Full width for input fields */
+    padding: var(--spacing-small); /* Padding inside the fields */
+    border-radius: var(--border-radius); /* Rounded corners for the fields */
+    border: 1px solid var(--border-color); /* Border color */
+    font-family: var(--font-body); /* Font for the input fields */
+    font-size: var(--font-size-base); /* Base font size */
+    margin-bottom: var(--spacing-small); /* Margin below each field */
+    transition: var(--transition-default); /* Smooth transition on focus */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-color); /* Change border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+textarea {
+    min-height: 120px; /* Minimum height for textarea */
+    resize: vertical; /* Allow only vertical resizing */
+}
+
+.ckeckbox-container .form-check{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: var(--spacing-small);
+
+    label{
+        margin-bottom: 0;
+    }
+}
+
+.ckeckbox-container .form-check input{
+    margin-right: var(--spacing-small);
+    width: fit-content;
+    height: fit-content;
+}
+
+.text-danger {
+    color: #d9534f; /* Red color for error messages */
+    font-size: 0.875rem; /* Smaller font size for error messages */
+    margin-top: var(--spacing-small); /* Margin above the error message */
+}
+
+select[multiple] {
+    height: 150px; /* Set a fixed height for multi-select dropdown */
+}

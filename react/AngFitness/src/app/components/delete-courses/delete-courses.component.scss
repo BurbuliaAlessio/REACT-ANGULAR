@@ -1,0 +1,116 @@
+/* Section Styling */
+.section-1 {
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-large);
+    background-color: var(--neutral-color);
+    justify-content: space-between;
+}
+
+/* Course Container Styling */
+.course {
+    background-color: #ffffff;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: calc(33.33% - var(--spacing-medium)); /* Responsive 3-column layout */
+    padding: var(--spacing-medium);
+    transition: var(--transition-default);
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.course:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.image-wrapper {
+    width: 100%;
+    height: 200px; /* Set a fixed height for the image */
+    margin-bottom: var(--spacing-medium);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+/* Course Name Styling */
+.course h2 {
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-small);
+}
+
+/* Subscription Status */
+.course .subscription-status {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Price Styling */
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Information Box Styling */
+.iddicted.information {
+    width: 100%;
+    margin-top: var(--spacing-large);
+    padding-top: var(--spacing-medium);
+    padding-bottom: var(--spacing-medium);
+    border-top: 2px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-medium);
+}
+
+.information p {
+    font-family: var(--font-body);
+    color: var(--text-color);
+}
+
+/* Schedule and Capacity */
+.schedule, .capacity {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+.schedule p, .capacity p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Delete Button */
+button {
+    width: 100%;
+    padding: var(--spacing-small);
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    margin-top: var(--spacing-medium);
+    font-size: 1rem;
+    transition: var(--transition-default);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}

@@ -1,0 +1,139 @@
+<div class="col-3 m-4">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>Add Course  </h2>
+      <div class="mb-3">
+        <label for="name" class="form-label">Course Name</label>
+        <input type="text" class="form-control" formControlName="name" required />
+        @if(isNameValid){
+            <div class="text-danger">Course name is required.</div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" formControlName="description" required></textarea>
+        @if(isDescriptionValid){
+            <div class="text-danger">Description is required.</div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="duration" class="form-label">Duration</label>
+        <input type="text" class="form-control" formControlName="duration" required />
+        @if(isDurationValid){
+            <div class="text-danger">Duration is required.</div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="level" class="form-label">Level</label>
+        <input type="text" class="form-control" formControlName="level" required />
+        @if(isLevelValid){
+            <div class="text-danger">Level is required.</div>
+        }
+      </div>
+  
+      <div class="mb-3 ckeckbox-container">
+        <label class="form-label">Days</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="monday" formControlName="days" value="Monday" />
+          <label class="form-check-label" for="monday">Monday</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="tuesday" formControlName="days" value="Tuesday" />
+          <label class="form-check-label" for="tuesday">Tuesday</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="wednesday" formControlName="days" value="Wednesday" />
+          <label class="form-check-label" for="wednesday">Wednesday</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="thursday" formControlName="days" value="Thursday" />
+          <label class="form-check-label" for="thursday">Thursday</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="friday" formControlName="days" value="Friday" />
+          <label class="form-check-label" for="friday">Friday</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="saturday" formControlName="days" value="Saturday" />
+          <label class="form-check-label" for="saturday">Saturday</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="sunday" formControlName="days" value="Sunday" />
+          <label class="form-check-label" for="sunday">Sunday</label>
+        </div>
+      
+        @if(isDaysValid){
+            <div class="text-danger">Days are required.</div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="time" class="form-label">Time</label>
+        <input type="time" class="form-control" formControlName="time" required />
+        @if(isTimeValid){
+            <div class="text-danger">Time is required.</div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" class="form-control" formControlName="price" required />
+        @if(isPriceValid){
+            <div class="text-danger">Invalid price format (e.g., $20.00).</div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="maxCapacity" class="form-label">Max Capacity</label>
+        <input type="number" class="form-control" formControlName="maxCapacity" required />
+        @if(isMaxCapacityValid){
+            <div class="text-danger">Max capacity must be a positive number.</div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="instructor" class="form-label">Instructor</label>
+        <input type="text" class="form-control" formControlName="instructor" required />
+        @if(isInstructorValid){
+            <div class="text-danger">Instructor name is required.</div>
+        }
+      </div>
+
+      <!-- <div class="mb-3">
+        <label for="image" class="form-label">Insert an image about the course</label>
+        <input type="file" class="form-control" formControlName="image">
+      </div> -->
+
+      <button type="button" class="btn btn-primary" (click)="isOpenModal()" [disabled]="form.invalid">Add course</button>
+      
+      @if(isModalOpen && form.valid){
+        <div class="modal-backdrop">
+          <div class="modal">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirm Course Creation</h5>
+              <button type="button" class="btn-close" (click)="isOpenModal()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><strong>Name:</strong> {{ form.value.name }}</p>
+              <p><strong>Description:</strong> {{ form.value.description }}</p>
+              <p><strong>Duration:</strong> {{ form.value.duration }}</p>
+              <p><strong>Level:</strong> {{ form.value.level }}</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" (click)="isOpenModal()">Cancel</button>
+              <button class="btn btn-primary" type="submit">Create Course</button>
+            </div>
+          </div>
+        </div>
+      }
+      @if(theCourseAdded){
+        <div class="success">
+          <p>
+            {{theCourseAdded}}
+          </p>
+        </div>
+      }
+    </form>
+  </div>

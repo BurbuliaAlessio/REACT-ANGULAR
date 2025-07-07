@@ -1,0 +1,196 @@
+/* 
+  * Home Page Stylesheet
+  * 
+  * Author: Alessio Burbulia
+  * Description: Stylesheet for the "Home" page of AngFitness. 
+  * This file includes layout, background settings, responsive design, and styling for various elements such as the header, sections, and articles.
+  * Date: 2025-01-20
+*/
+
+header.heading-page {
+    /* Background image for the header */
+    background-image: url("/images/background/our-gym.jpg");
+    /* Full-width header with background image and fixed attachment */
+    width: 100%;
+    background-repeat: no-repeat; /* Prevent background repetition */
+    background-position: top; /* Center the background image */
+    background-attachment: fixed; /* Keep background fixed during scroll */
+    background-size: cover; /* Cover the entire header area with the background */
+    overflow: hidden; /* Prevent any content from overflowing */
+
+    /* Flexbox setup for centering content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px; /* Space between the content elements */
+}
+
+/* Responsive design: For screens smaller than 992px (mobile devices) */
+@media (max-width: 992px) {
+    header.heading-page {
+        height: 90vh; /* Set the height of the header to 90% of the viewport height */
+    }
+}
+
+/* For medium-sized screens between 992px and 1400px */
+@media (min-width: 992px) and (max-width: 1400px) {
+    header.heading-page {
+        margin-top: 80px; /* Add margin on top */
+        height: 90vh; /* Set the height of the header to 90% of the viewport height */
+    }
+}
+
+/* For large screens (greater than 1400px) */
+@media (min-width: 1400px) {
+    header.heading-page {
+        margin-top: 100px; /* Add margin on top */
+        height: 90vh; /* Set the height of the header to 90% of the viewport height */
+    }
+}
+
+header.heading-page figure {
+    /* Style for the logo container */
+    width: 90%;
+    margin: 0 auto;
+    max-width: 500px; /* Max width for the logo */
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--neutral-color); /* Text color */
+}
+
+header.heading-page figure img {
+    /* Ensure the logo image fits within its container */
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 500px; /* Max width of the logo */
+    max-height: 500px; /* Max height of the logo */
+}
+
+header.heading-page .content {
+    /* Positioning and styling of the main content inside the header */
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--neutral-color);
+    padding: var(--spacing-medium);
+    font-size: 2.5rem; /* Large font size for the header text */
+    text-align: center; /* Center-align the text */
+    border-radius: 30px;
+    padding: 30px 10px;
+}
+
+header.heading-page .content .container {
+    /* Container for the header anchor link */
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+header.heading-page h1 {
+    /* Hide the main heading (H1) */
+    display: none;
+}
+
+header.heading-page h2 {
+    /* Style for the secondary heading */
+    font-size: 2.5rem; /* Set the font size */
+}
+
+main {
+    /* Main content area of the page */
+    padding: var(--spacing-large) var(--spacing-medium); /* Apply custom spacing */
+    background-color: var(--neutral-color); /* Set background color */
+}
+
+section {
+    /* Margin below each section */
+    margin-bottom: var(--spacing-large);
+}
+
+section header h2 {
+    /* Styling for section headers */
+    font-family: var(--font-main);
+    font-size: 2rem; /* Set font size */
+    color: var(--primary-color); /* Primary color for the text */
+    text-align: center; /* Center-align the section title */
+    margin-bottom: var(--spacing-medium); /* Margin below the title */
+    position: relative;
+}
+
+section header h2::after {
+    /* Add a decorative line below the section header */
+    content: "";
+    display: block;
+    width: 80px; /* Set width of the line */
+    height: 4px; /* Set height of the line */
+    background-color: var(--accent-color); /* Accent color for the line */
+    margin: var(--spacing-small) auto 0; /* Center the line and add margin */
+}
+
+article {
+    /* Article styling */
+    background-color: #ffffff; /* White background */
+    border: var(--border-width) solid var(--secondary-color); /* Border around the article */
+    border-radius: var(--border-radius); /* Rounded corners */
+    padding: var(--spacing-medium); /* Padding around content */
+    box-shadow: var(--box-shadow); /* Box shadow for depth */
+    margin-bottom: var(--spacing-medium); /* Margin below each article */
+    transition: var(--transition-default); /* Smooth transition for hover effect */
+}
+
+article:hover {
+    /* Hover effect: Increase shadow to indicate interactivity */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+article header h3 {
+    /* Styling for article headers */
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    color: var(--primary-color); /* Primary color for article headers */
+    margin-bottom: var(--spacing-small); /* Space below the header */
+}
+
+article header h4 {
+    /* Styling for sub-headers within articles */
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-color); /* Secondary text color */
+    margin-bottom: var(--spacing-medium); /* Margin below the sub-header */
+}
+
+article p {
+    /* Styling for paragraphs inside articles */
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: var(--line-height-base); /* Set line height for readability */
+    color: var(--text-color); /* Text color */
+    margin-bottom: var(--spacing-small); /* Margin below each paragraph */
+}
+
+/* Responsive design: For screens larger than 768px */
+@media (min-width: 768px) {
+    section {
+        /* Stack the section content vertically and center-align */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    article {
+        /* Limit the width of the articles */
+        max-width: 800px;
+    }
+    
+    section-4 article {
+        /* For the 4th section, limit the article width */
+        max-width: 600px;
+    }
+}

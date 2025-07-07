@@ -1,0 +1,57 @@
+<nav aria-label="Navigazione principale" role="navigation">
+  <div class="menuToggle">
+
+    <!-- Fake checkbox for menu toggle (hamburger effect) -->
+    <input type="checkbox" id="menuCheckbox" (change)="toggleOverlay()" #menuCheckbox/>
+
+    <!-- Hamburger icon (three bars) -->
+    <span></span>
+    <span></span>
+    <span></span>
+  
+    <div class="hamburger-background">
+      <!-- Background for the hamburger menu -->
+    </div>
+    
+    <div class="menu">
+      <a routerLink="/" class="logo">
+        <figure class="logo img-container">
+          <!-- Cascina Caccia logo image -->
+          <img src="/images/logo/AngFitness-logo-1.png"
+          alt="Images Logo of AngFitness" loading="lazy"/>
+        </figure>
+      </a>
+      
+      <ul class="nav-list">
+        <!-- Navigation list items -->
+        
+        <li>
+          <a routerLink="/" title="Descover our gym">
+            HOME
+          </a>
+        </li>
+        
+        <li>
+          <a routerLink="ourCourses" title="Descover our courses">
+            OUR COURSES
+          </a>
+        </li>
+        
+        <li>
+          <a routerLink="aboutUs" title="View about us">
+            ABOUT US
+          </a>
+        </li>
+        
+        <li>
+          <a routerLink="administrator/addCourse" title="got to administrator page">
+            ADMINISTRATOR
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="sub-background" [class.show]="isShow" (click)="toggleOverlay(); toggleInput()">
+</div>

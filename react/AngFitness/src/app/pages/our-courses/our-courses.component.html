@@ -1,0 +1,20 @@
+<!-- Page Header -->
+<header class="heading-page">
+    <div class="overlay">
+        <div class="content">
+            <figure>
+                <!-- Logo Image -->
+                <img src="images/logo/AngFitness-logo-4.png" alt="">
+            </figure>
+            <h1>UOR Courses</h1>
+        </div>
+    </div>
+</header>
+
+<section class="section-1">
+    @for (course of courses(); track course.id){
+            <app-course [course]="course">
+                
+            </app-course>
+    }
+</section>

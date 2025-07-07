@@ -1,0 +1,91 @@
+/* 
+* Administrator Stylesheet
+* 
+* Author: Alessio Burbulia
+* Description: Stylesheet for the "Administrator" page of AngFitness. 
+* This file includes responsive design, layout, and styling for the header, sections, and articles.
+* Date: 2025-01-20
+*/
+
+/* Header Styling */
+header.heading-page {
+    background-image: url("/images/background/our-gym.jpg"); /* Background image for the header */
+    background-size: cover; /* Scales the background image to cover the entire header */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    margin-bottom: var(--spacing-large); /* Adds space below the header */
+    height: 40vh; /* Sets the height of the header */
+    background-color: #d9d9d9; /* Background color of the header */
+}
+
+header.heading-page .content {
+    /* Positioning and styling of the main content inside the header */
+    display: flex; /* Aligns content horizontally */
+    flex-direction: column; /* Sets the layout direction to column */
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    background-color: var(--neutral-color); /* Background color of the content */;
+    height: 90%;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 30px;
+}
+
+header.heading-page figure {
+    display: flex; /* Enables flex layout */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    width: fit-content; /* Shrinks the figure to fit its content */
+    height: 50%; /* Figure takes up 50% of the header height */
+    overflow: hidden; /* Hides any overflowing content */
+}
+
+header.heading-page figure img {
+    height: 100%; /* Makes the image fill the figure vertically */
+    width: auto; /* Maintains the aspect ratio of the image */
+}
+
+/* Header H1 Styling */
+header h1 {
+    font-family: var(--font-main); /* Sets the main font */
+    font-size: 3rem; /* Font size for the main title */
+    margin-bottom: var(--spacing-medium); /* Adds space below the title */
+    color: var(--primary-color); /* Applies the primary color */
+}
+
+/* Responsive Design for Header */
+@media (max-width: 992px) {
+    header.heading-page {
+        margin-top: 0px; /* Removes extra margin for smaller screens */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+    header.heading-page {
+        margin-top: 80px; /* Adds moderate margin for medium screens */
+    }
+}
+
+@media (min-width: 1400px) {
+    header.heading-page {
+        margin-top: 100px; /* Adds larger margin for larger screens */
+    }
+}
+
+.bar-container{
+    min-height: 100vh;
+}
+
+.bar-container div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px auto;
+}
+
+.bar-container div a{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: var(--neutral-color);
+    border-radius: 7px;
+}

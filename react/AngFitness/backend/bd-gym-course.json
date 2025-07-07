@@ -1,0 +1,163 @@
+{
+  "courses": [
+    {
+      "id": "3",
+      "name": "Strength and Conditioning",
+      "description": "Build strength and endurance with a variety of exercises.",
+      "duration": "60 minutes",
+      "level": "Advanced",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Thursday"
+        ],
+        "time": "7:00 PM"
+      },
+      "isSubscribed": true,
+      "price": "$30",
+      "image": "/images/api/c-3.jpg",
+      "instructor": "Emma Brown",
+      "maxCapacity": "18",
+      "actualSubscribed": "16"
+    },
+    {
+      "id": "4",
+      "name": "Pilates Core Workout",
+      "description": "Focus on core strength and flexibility with pilates.",
+      "duration": "50 minutes",
+      "level": "All levels",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Friday"
+        ],
+        "time": "10:30 AM"
+      },
+      "isSubscribed": true,
+      "price": "$22",
+      "image": "/images/api/c-4.jpg",
+      "instructor": "Sophia White",
+      "maxCapacity": "20",
+      "actualSubscribed": "13"
+    },
+    {
+      "id": "5",
+      "name": "Zumba Dance Party",
+      "description": "Fun and energetic dance fitness class.",
+      "duration": "55 minutes",
+      "level": "All levels",
+      "schedule": {
+        "days": [
+          "Wednesday",
+          "Saturday"
+        ],
+        "time": "5:30 PM"
+      },
+      "isSubscribed": false,
+      "price": "$18",
+      "image": "/images/api/c-5.jpg",
+      "instructor": "Michael Davis",
+      "maxCapacity": "25",
+      "actualSubscribed": "20"
+    },
+    {
+      "id": "6",
+      "name": "Spin Class",
+      "description": "High-energy indoor cycling session to boost stamina.",
+      "duration": "45 minutes",
+      "level": "Intermediate",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Thursday"
+        ],
+        "time": "6:00 AM"
+      },
+      "isSubscribed": true,
+      "price": "$24",
+      "image": "/images/api/c-6.jpg",
+      "instructor": "Laura Martinez",
+      "maxCapacity": "15",
+      "actualSubscribed": "12"
+    },
+    {
+      "id": "8",
+      "name": "Meditation and Mindfulness",
+      "description": "Relax and unwind with guided meditation practices.",
+      "duration": "30 minutes",
+      "level": "All levels",
+      "schedule": {
+        "days": [
+          "Sunday"
+        ],
+        "time": "8:00 AM"
+      },
+      "isSubscribed": true,
+      "price": "$15",
+      "image": "/images/api/c-8.jpg",
+      "instructor": "Isabella Johnson",
+      "maxCapacity": "30",
+      "actualSubscribed": "26"
+    },
+    {
+      "id": "9",
+      "name": "Cardio Blast",
+      "description": "Burn calories with this high-energy cardio workout.",
+      "duration": "40 minutes",
+      "level": "Intermediate",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Friday"
+        ],
+        "time": "7:00 PM"
+      },
+      "isSubscribed": false,
+      "price": "$20",
+      "image": "/images/api/c-9.jpg",
+      "instructor": "Daniel Lee",
+      "maxCapacity": "20",
+      "actualSubscribed": "15"
+    },
+    {
+      "id": 10,
+      "name": "Bodyweight Training",
+      "description": "A no-equipment workout that builds strength and flexibility.",
+      "duration": "50 minutes",
+      "level": "Beginner",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday"
+        ],
+        "time": "6:00 PM"
+      },
+      "isSubscribed": false,
+      "price": "$18",
+      "image": "/images/api/c-10.jpg",
+      "instructor": "Charlotte King",
+      "maxCapacity": "25",
+      "actualSubscribed": "20"
+    },
+    {
+      "id": 11,
+      "name": "Dance Aerobics",
+      "description": "Move to the rhythm while burning calories and having fun.",
+      "duration": "60 minutes",
+      "level": "All levels",
+      "schedule": {
+        "days": [
+          "Thursday",
+          "Saturday"
+        ],
+        "time": "4:00 PM"
+      },
+      "isSubscribed": false,
+      "price": "$22",
+      "image": "/images/api/c-11.jpg",
+      "instructor": "Oliver Hall",
+      "maxCapacity": "30",
+      "actualSubscribed": "28"
+    }
+  ]
+}

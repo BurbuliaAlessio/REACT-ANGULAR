@@ -1,0 +1,254 @@
+/* 
+* Global Stylesheet
+
+* Author: Alessio Burbulia
+* Description: This is the global stylesheet for the project.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* Colors */
+  --primary-color: #008080; /* Deep teal for organic and healthy vibes */
+  --secondary-color: #A7D1AB; /* Calming light green for freshness */
+  --accent-color: #009688; /* Deep teal for emphasis */
+  --neutral-color: #f4f4f4; /* Light gray for backgrounds */
+  --text-color: #333333; /* Dark gray for readable text */
+  --link-color: #009688; /* Accent color for links */
+  --hover-color: #00695c; /* Darker teal for hover effects */
+  
+  /* Typography */
+  --font-main: "Poppins", sans-serif; /* Main font for headings */
+  --font-body: "Roboto", sans-serif; /* Body font for readability */
+  --font-size-base: 16px; /* Base font size */
+  --line-height-base: 1.5; /* Base line height */
+  --heading-line-height: 1.2; /* Line height for headings */
+  
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+  
+  /* Borders and Radius */
+  --border-radius: 8px; /* Rounded corners */
+  --border-width: 2px; /* Standard border width */
+  --border-color: var(--secondary-color); /* Border color for components */
+  
+  /* Box Shadows */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-default: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+/* Example SCSS usage */
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--neutral-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  line-height: var(--heading-line-height);
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: var(--transition-default);
+  
+  &:hover {
+    color: var(--hover-color);
+  }
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: var(--border-width) solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: var(--transition-default);
+  
+  &:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+  }
+}
+
+.container {
+  padding: var(--spacing-medium);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-medium);
+  transition: var(--transition-default);
+  
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.overlay {
+  /* Full-size overlay to dim the background and apply a blur effect */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 52, 61, 0.36); /* Semi-transparent white overlay */
+  backdrop-filter: blur(1px); /* Apply a blur effect to the background */
+  -webkit-backdrop-filter: blur(1px); /* Safari support for blur effect */
+  
+  /* Flexbox layout for centering content inside the overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary); /* Set the text color */
+}
+
+.cta-button {
+  /* Styling for call-to-action buttons */
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--accent-color); /* Button background color */
+  color: #ffffff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: var(--spacing-small) var(--spacing-medium); /* Padding inside the button */
+  border-radius: var(--border-radius); /* Rounded corners for the button */
+  transition: var(--transition-default); /* Smooth transition for hover effect */
+  text-align: center; /* Center the text inside the button */
+  margin-top: 30px;
+  padding: 12px 23px;
+}
+
+.cta-button:hover {
+  /* Hover effect for the button */
+  background-color: var(--hover-color); /* Change background on hover */
+}
+
+.btn-primary[type="submit"] {
+  background-color: var(--primary-color); /* Background color for the submit button */
+  color: #ffffff; /* White text color */
+  border: none; /* No border for the button */
+  padding: var(--spacing-small) var(--spacing-medium); /* Padding inside the button */
+  border-radius: var(--border-radius); /* Rounded corners for the button */
+  font-family: var(--font-body); /* Font for the button text */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: var(--font-size-base); /* Font size for the button text */
+  transition: var(--transition-default); /* Smooth transition on hover */
+}
+
+.btn-primary[type="submit"]:disabled {
+  background-color: #e0e0e0; /* Disabled button background color */
+  cursor: not-allowed; /* Change cursor to not-allowed when disabled */
+}
+
+.btn-primary[type="submit"]:hover {
+  background-color: var(--hover-color); /* Change background color on hover */
+}
+
+/* Backdrop for the modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black for backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* Modal box */
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header styling */
+.modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+/* Close button */
+.btn-close {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* Modal body */
+.modal-body {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Footer buttons */
+.modal-footer {
+  padding: 1rem;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.modal-footer .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+}
+
+.success{
+  color: var(--primary-color);
+  margin: 30px auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

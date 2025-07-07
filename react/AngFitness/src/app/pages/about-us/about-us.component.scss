@@ -1,0 +1,123 @@
+/* 
+  * About Us Stylesheet
+  * 
+  * Author: Alessio Burbulia
+  * Description: Stylesheet for the "About Us" page of AngFitness. 
+  * This file includes responsive design, layout, and styling for the header, sections, and articles.
+  * Date: 2025-01-20
+*/
+
+/* Header Styling */
+header.heading-page {
+    background-image: url("/images/background/our-gym.jpg"); /* Background image for the header */
+    background-size: cover; /* Scales the background image to cover the entire header */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    margin-bottom: var(--spacing-large); /* Adds space below the header */
+    height: 40vh; /* Sets the height of the header */
+    background-color: #d9d9d9; /* Background color of the header */
+}
+
+header.heading-page .content {
+    /* Positioning and styling of the main content inside the header */
+    display: flex; /* Aligns content horizontally */
+    flex-direction: column; /* Sets the layout direction to column */
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    background-color: var(--neutral-color); /* Background color of the content */;
+    height: 90%;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 30px;
+}
+
+header.heading-page figure {
+    display: flex; /* Enables flex layout */
+    justify-content: center; /* Horizontally centers the image */
+    align-items: center; /* Vertically centers the image */
+    width: fit-content; /* Shrinks the figure to fit its content */
+    height: 50%; /* Figure takes up 50% of the header height */
+    overflow: hidden; /* Hides any overflowing content */
+}
+
+header.heading-page figure img {
+    height: 100%; /* Makes the image fill the figure vertically */
+    width: auto; /* Maintains the aspect ratio of the image */
+}
+
+/* Header H1 Styling */
+header h1 {
+    font-family: var(--font-main); /* Sets the main font */
+    font-size: 3rem; /* Font size for the main title */
+    margin-bottom: var(--spacing-medium); /* Adds space below the title */
+    color: var(--primary-color); /* Applies the primary color */
+}
+
+/* Responsive Design for Header */
+@media (max-width: 992px) {
+    header.heading-page {
+        margin-top: 0px; /* Removes extra margin for smaller screens */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+    header.heading-page {
+        margin-top: 80px; /* Adds moderate margin for medium screens */
+    }
+}
+
+@media (min-width: 1400px) {
+    header.heading-page {
+        margin-top: 100px; /* Adds larger margin for larger screens */
+    }
+}
+
+/* Main Content Styling */
+main {
+    padding: var(--spacing-large); /* Adds padding to the main content */
+    background-color: var(--neutral-color); /* Neutral background color */
+    font-family: var(--font-body); /* Sets the font family for the main content */
+}
+
+/* Sections Styling */
+.section-1, .section-2, .section-3 {
+    margin-bottom: var(--spacing-large); /* Adds space between sections */
+}
+
+
+/* Article Styling */
+article {
+    background-color: #ffffff; /* Sets the background color */
+    border: var(--border-width) solid var(--border-color); /* Adds a border */
+    border-radius: var(--border-radius); /* Rounds the corners */
+    padding: var(--spacing-medium); /* Adds padding inside the article */
+    margin-bottom: var(--spacing-medium); /* Adds space below each article */
+    box-shadow: var(--box-shadow); /* Adds shadow for depth */
+    transition: var(--transition-default); /* Smooth transition for hover effects */
+}
+
+article:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhances shadow on hover */
+}
+
+/* Article Header H3 Styling */
+article header h3 {
+    font-family: var(--font-main); /* Sets the main font */
+    font-size: 1.5rem; /* Font size for section titles */
+    color: var(--accent-color); /* Applies the accent color */
+    margin-bottom: var(--spacing-small); /* Adds space below the title */
+}
+
+/* Article Header H4 Styling */
+article header h4 {
+    font-size: 1.125rem; /* Font size for subtitles */
+    color: var(--secondary-color); /* Applies the secondary color */
+    margin-bottom: var(--spacing-small); /* Adds space below the subtitle */
+}
+
+/* Article Paragraph Styling */
+article p {
+    font-size: 1rem; /* Standard font size for paragraphs */
+    line-height: var(--line-height-base); /* Ensures good readability */
+    color: var(--text-color); /* Applies the text color */
+}

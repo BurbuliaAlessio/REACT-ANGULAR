@@ -1,0 +1,70 @@
+<section class="section-1">
+    @for (course of courses(); track course.id) {
+        <div class="course">
+            <figure class="image-wrapper">
+                <img src="{{ course.image }}" alt="image about {{ course.name }}">
+            </figure>
+            <h2>{{ course.name }}</h2>
+            <div>               
+                <div>
+                    @if(course.isSubscribed) {
+                        you're subscribe on this course
+                    } @else {
+                        you're not subscribe on this course
+                    }
+                </div>
+                <div class="price">
+                    <p>{{ course.price }}</p>
+                </div>
+            </div>
+            <div class="iddicted information">
+                <div class="information">
+                    <p>{{ course.description }}</p>
+                    <p>{{ course.duration }}</p>
+                    <p>{{ course.level }}</p>
+                </div>
+                <div class="schedule">
+                    <p>{{ course.schedule.days }}</p>
+                    <p>{{ course.schedule.time }}</p>
+                </div>
+                <div class="capacity">
+                    <p>
+                        maxCapacity: {{ course.maxCapacity }}
+                    </p>
+                    <p>
+                        actualSubscribed: {{ course.actualSubscribed }}
+                    </p>
+                </div>
+                <div>
+                    <button (click)="isOpenModal(course)">
+                        DELETE
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+    @if(isModalOpen && selectedCourse){
+        <div class="modal-backdrop">
+            <div class="modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm to delete this course</h5>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Name:</strong> {{ selectedCourse.name }}</p>
+                    <p><strong>Description:</strong> {{ selectedCourse.description }}</p>
+                    <p><strong>Duration:</strong> {{ selectedCourse.duration }}</p>
+                    <p><strong>Level:</strong> {{ selectedCourse.level }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="cta-button" (click)="isOpenModal()">
+                        Cancel
+                    </button>
+                    
+                    <button type="button" (click)="onClickDeleteCourse(selectedCourse); isOpenModal()" class="cta-button">
+                        DELETE
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</section>

@@ -1,0 +1,58 @@
+/* 
+  * Error Page Stylesheet
+  * 
+  * Author: Alessio Burbulia
+  * Description: Stylesheet for the "404 Error" page of AngFitness. 
+  * This file includes layout, responsiveness, and styling for the error message container, logo, and link.
+  * Date: 2025-01-20
+*/
+
+main {
+    /* Set the width of the container and center it horizontally */
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh; /* Full height of the viewport */
+    
+    /* Enable flexbox layout for centering content */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    
+    /* Space between elements */
+    gap: 40px; /* Default gap between the elements */
+}
+
+/* Responsive design: Adjust layout for smaller screens (max-width 992px) */
+@media (max-width: 992px) {
+    main {
+        gap: 20px; /* Reduce gap on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+}
+
+main figure {
+    /* Ensure the image container is responsive and centered */
+    width: 100%;
+    max-width: 300px; /* Max width for the logo */
+    height: fit-content;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+main figure img {
+    /* Make the logo image responsive */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+main h1 {
+    /* Style the error code (404) */
+    font-size: 5rem; /* Large font size for prominence */
+    font-weight: 900; /* Bold text for emphasis */
+}
+
+main a {
+    /* Style for the link */
+    font-size: 2.2rem; /* Make the font size of the link larger */
+}
